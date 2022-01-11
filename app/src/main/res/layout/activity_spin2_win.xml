@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/colorPrimaryDark"
+    tools:context="com.earnhq.app.app.earnhq.app.Activity.InviteFriendsActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_invite"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/color_bg"
+        app:titleTextColor="#ffffff"
+        app:subtitleTextColor="#ffffff"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:elevation="0dp" >
+    </androidx.appcompat.widget.Toolbar>
+    <View
+        android:layout_below="@id/toolbar_invite"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/home_design"/>
+    <TextView
+        android:fontFamily="@font/merriweather"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="5dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:text="@string/spin2win"
+        android:paddingBottom="10dp"
+        android:background="@drawable/home_banner"
+        android:id="@+id/invite_friends_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pointsLayout"
+        android:layout_margin="20dp"
+        android:layout_below="@+id/invite_friends_name"
+        android:orientation="horizontal">
+        <TextView
+            android:fontFamily="@font/merriweather"
+            android:layout_width="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:text="Your Points : "/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:id="@+id/pointsTextView"
+            android:layout_height="wrap_content"
+            android:text="0"/>
+
+    </LinearLayout>
+
+    <com.bluehomestudio.luckywheel.LuckyWheel
+        android:id="@+id/wheel"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_centerInParent="true"
+        app:background_color="@color/color_bg" />
+
+    <RelativeLayout
+        android:id="@+id/bannerView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="70dp"
+        app:cardCornerRadius="10dp"
+        android:elevation="10dp"
+        app:cardElevation="10dp"
+        android:foreground="?android:selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:id="@+id/spinBtn"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_bg"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:fontFamily="@font/merriweather"
+            android:layout_width="match_parent"
+            android:textSize="30dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:paddingBottom="10dp"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:background="@color/color_bg"
+            android:text="SPIN"/>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

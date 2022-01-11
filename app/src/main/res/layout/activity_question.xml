@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".Activity.QuestionActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/home_design" />
+
+    <LinearLayout
+        android:id="@+id/time_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:fontFamily="@font/merriweather"
+            android:id="@+id/timer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/timer"
+            android:drawablePadding="8dp"
+            android:gravity="left"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:fontFamily="@font/merriweather"
+            android:id="@+id/number_of_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableRight="@drawable/questions"
+            android:drawablePadding="8dp"
+            android:gravity="right"
+            android:padding="10dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/time_linear">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linear_layout_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:fontFamily="@font/merriweather"
+                    android:id="@+id/question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:lineHeight="30dp"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:fontFamily="@font/merriweather"
+                    android:id="@+id/question_points"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_background"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:gravity="center"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="5dp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp">
+
+                <RadioButton
+                    android:fontFamily="@font/merriweather"
+                    android:id="@+id/answer1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:fontFamily="@font/merriweather"
+                    android:id="@+id/answer2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/banner_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="false"
+                    android:orientation="vertical"
+                    />
+
+<!--                <RelativeLayout-->
+<!--                    android:id="@+id/bannerView4"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center"/>-->
+
+                <LinearLayout
+                    android:id="@+id/ads_linear_profile12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/text_background"
+                    android:orientation="vertical"
+                    android:visibility="gone" />
+
+
+                <RadioButton
+                    android:fontFamily="@font/merriweather"
+                    android:id="@+id/answer3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:fontFamily="@font/merriweather"
+                    android:id="@+id/answer4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:fontFamily="@font/merriweather"
+                    android:id="@+id/submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:backgroundTint="@color/colorAccent"
+                    android:padding="10dp"
+                    android:text="@string/activity_question_submit"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:fontFamily="@font/merriweather"
+                    android:id="@+id/finish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:backgroundTint="@color/colorAccent"
+                    android:text="@string/activity_question_exit"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/fifty_fifty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:backgroundTint="@color/colorAccent"
+                    android:text="50/50"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/reward_video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:onClick="showRewardedVideo"
+                    android:background="@drawable/text_background"
+                    android:backgroundTint="#e74c3c"
+                    android:text="@string/activity_question_reward"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/question_ads_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal" />
+
+    <RelativeLayout
+        android:id="@+id/bannerView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"/>
+</RelativeLayout>

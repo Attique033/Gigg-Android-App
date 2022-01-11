@@ -1,0 +1,360 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+        <item name="android:statusBarColor">@color/new_blue</item>
+    </style>
+
+    <style name="MainScreen" parent="AppTheme">
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+    </style>
+
+    <style name="SplashScreen" parent="AppTheme">
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+    </style>
+
+    <style parent="@android:style/Widget.Spinner" name="SpinnerAsEditText">
+        <item name="android:background">@android:drawable/edit_text</item>
+    </style>
+
+    <style name="AppThemeSubcription" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#ffffff</item>
+        <item name="colorPrimaryDark">#ffffff</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/rubik</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
+        <item name="android:statusBarColor">#FBF6ED</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+    </style>
+
+    <style name="AppThemeVideo" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#FBF6ED</item>
+        <item name="colorPrimaryDark">#FBF6ED</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/rubik</item>
+    </style>
+
+    <style name="review_tool_text">
+        <item name="android:textColor">#000000</item>
+        <item name="fontFamily">@font/merriweather</item>
+        <item name="android:textSize">21sp</item>
+        <item name="lineSpacing">25dp</item>
+    </style>
+
+    <style name="review_list_username">
+        <item name="android:textColor">#000000</item>
+        <item name="fontFamily">@font/merriweather</item>
+        <item name="android:textSize">16sp</item>
+        <item name="lineSpacing">18dp</item>
+    </style>
+
+    <style name="review_list_score">
+        <item name="android:textColor">#000000</item>
+        <item name="fontFamily">@font/merriweather</item>
+        <item name="android:textSize">15sp</item>
+        <item name="lineSpacing">18dp</item>
+    </style>
+
+    <style name="review_list_day">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="fontFamily">@font/merriweather</item>
+        <item name="android:textSize">12sp</item>
+        <item name="lineSpacing">14dp</item>
+    </style>
+
+    <style name="review_list_description">
+        <item name="android:textColor">#000000</item>
+        <item name="fontFamily">@font/merriweather</item>
+        <item name="android:textSize">14sp</item>
+        <item name="lineSpacing">17dp</item>
+    </style>
+
+    <style name="give_review_amount_text">
+        <item name="android:textColor">#000000</item>
+        <item name="fontFamily">@font/merriweather</item>
+        <item name="android:textSize">20sp</item>
+        <item name="lineSpacing">24dp</item>
+    </style>
+
+    <style name="review_text">
+        <item name="android:textColor">#BBBBBB</item>
+        <item name="fontFamily">@font/rubik</item>
+        <item name="android:textSize">13sp</item>
+        <item name="lineSpacing">16dp</item>
+    </style>
+
+    <style name="give_review_submit_text">
+        <item name="android:textColor">#ffffff</item>
+        <item name="fontFamily">@font/rubik_medium</item>
+        <item name="android:textSize">15sp</item>
+        <item name="lineSpacing">18dp</item>
+    </style>
+
+    <style name="dash_nav_text">
+        <item name="android:textColor">#555555</item>
+        <item name="fontFamily">@font/merriweather</item>
+        <item name="android:textSize">15sp</item>
+        <item name="lineHeight">18sp</item>
+    </style>
+
+    <style name="cat_search_text">
+        <item name="android:textColor">#B8B8B8</item>
+        <item name="fontFamily">@font/merriweather_bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="lineHeight">21sp</item>
+    </style>
+
+    <style name="cat_bot_text">
+        <item name="android:textColor">@color/white</item>
+        <item name="fontFamily">@font/merriweather_sans_light</item>
+        <item name="android:textSize">12sp</item>
+        <item name="lineHeight">14sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="subcription_text_header">
+        <item name="android:textColor">#456168</item>
+        <item name="fontFamily">@font/merriweather_bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="lineHeight">23sp</item>
+    </style>
+
+    <style name="subcription_text_desc">
+        <item name="android:textColor">#456168</item>
+        <item name="fontFamily">@font/merriweather</item>
+        <item name="android:textSize">15sp</item>
+        <item name="lineHeight">18sp</item>
+    </style>
+
+    <style name="subcription_text_grant">
+        <item name="android:textColor">#000000</item>
+        <item name="fontFamily">@font/merriweather</item>
+        <item name="android:textSize">15sp</item>
+        <item name="lineHeight">18sp</item>
+    </style>
+
+    <style name="micro_header_text">
+        <item name="android:textColor">#ffffff</item>
+        <item name="fontFamily">@font/merriweather</item>
+        <item name="android:textSize">15sp</item>
+        <item name="lineHeight">18sp</item>
+    </style>
+
+    <style name="micro_header_text_2">
+        <item name="android:textColor">#ffffff</item>
+        <item name="fontFamily">@font/merriweather</item>
+        <item name="android:textSize">17sp</item>
+        <item name="lineHeight">20sp</item>
+        <item name="android:fontWeight">400</item>
+    </style>
+
+    <style name="micro_item_text">
+        <item name="android:textColor">#000000</item>
+        <item name="fontFamily">@font/merriweather_bold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="lineHeight">14sp</item>
+    </style>
+
+    <style name="video_header_text">
+        <item name="android:textColor">#456168</item>
+        <item name="fontFamily">@font/merriweather_bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="lineHeight">23sp</item>
+    </style>
+
+    <style name="video_text">
+        <item name="android:textColor">#ffffff</item>
+        <item name="fontFamily">@font/merriweather</item>
+        <item name="android:textSize">17sp</item>
+        <item name="lineHeight">20sp</item>
+    </style>
+
+    <style name="profile_head_text">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="fontFamily">@font/merriweather_sans_light</item>
+        <item name="android:textSize">16sp</item>
+        <item name="lineHeight">24sp</item>
+    </style>
+
+    <style name="profile_sec_text">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="fontFamily">@font/merriweather_sans_light</item>
+        <item name="android:textSize">12sp</item>
+        <item name="lineHeight">18sp</item>
+    </style>
+
+    <style name="profile_social_count">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="fontFamily">@font/merriweather_sans_light</item>
+        <item name="android:textSize">10sp</item>
+        <item name="lineHeight">23sp</item>
+    </style>
+    <style name="profile_social_count2">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="fontFamily">@font/merriweather_sans_light</item>
+        <item name="android:textSize">16sp</item>
+        <item name="lineHeight">23sp</item>
+    </style>
+
+    <style name="tab_text" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/merriweather</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="dash_username">
+        <item name="android:textColor">#030303</item>
+        <item name="fontFamily">@font/merriweather_bold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="lineHeight">14sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="dash_email">
+        <item name="android:textColor">#304351</item>
+        <item name="fontFamily">@font/merriweather_sans_light</item>
+        <item name="android:textSize">10sp</item>
+        <item name="lineHeight">12sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="dash_my_balance">
+        <item name="android:textColor">#304351</item>
+        <item name="fontFamily">@font/merriweather_bold</item>
+        <item name="android:textSize">10sp</item>
+        <item name="lineHeight">12sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="dash_balance">
+        <item name="android:textColor">#EC7B75</item>
+        <item name="fontFamily">@font/merriweather_bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="lineHeight">24sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="dash_withdraw">
+        <item name="android:textColor">#304351</item>
+        <item name="fontFamily">@font/merriweather_sans_light</item>
+        <item name="android:textSize">10sp</item>
+        <item name="lineHeight">12sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="dash_tile_text">
+        <item name="android:textColor">#304351</item>
+        <item name="fontFamily">@font/merriweather</item>
+        <item name="android:textSize">12sp</item>
+        <item name="lineHeight">14sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="dash_Tittle">
+        <item name="android:textColor">#304351</item>
+        <item name="fontFamily">@font/merriweather_bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="lineHeight">18sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="cat_title">
+        <item name="android:textColor">#304351</item>
+        <item name="fontFamily">@font/merriweather_bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="lineHeight">24sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="searchText">
+        <item name="android:textColor">#304351</item>
+        <item name="fontFamily">@font/merriweather</item>
+        <item name="android:textSize">18sp</item>
+        <item name="lineHeight">20sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="EscrowTitle">
+        <item name="android:textColor">#304351</item>
+        <item name="fontFamily">@font/merriweather_bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="lineHeight">24sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="EscrowParagraph">
+        <item name="android:textColor">#304351</item>
+        <item name="fontFamily">@font/merriweather</item>
+        <item name="android:textSize">12sp</item>
+        <item name="lineHeight">14sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="EscrowTitle2">
+        <item name="android:textColor">#304351</item>
+        <item name="fontFamily">@font/merriweather</item>
+        <item name="android:textSize">14sp</item>
+        <item name="lineHeight">17sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="EscrowButton">
+        <item name="android:textColor">#ffffff</item>
+        <item name="fontFamily">@font/merriweather_bold</item>
+        <item name="android:textSize">8sp</item>
+        <item name="lineHeight">10sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="EscrowChatTool">
+        <item name="android:textColor">#ffffff</item>
+        <item name="fontFamily">@font/merriweather_bold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="lineHeight">14sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="EscrowChatUsername">
+        <item name="android:textColor">#030303</item>
+        <item name="fontFamily">@font/merriweather_bold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="lineHeight">14sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="EscrowChatMessage">
+        <item name="android:textColor">#304351</item>
+        <item name="fontFamily">@font/merriweather</item>
+        <item name="android:textSize">10sp</item>
+        <item name="lineHeight">12sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="EscrowChatTime">
+        <item name="android:textColor">#304351</item>
+        <item name="fontFamily">@font/merriweather</item>
+        <item name="android:textSize">8sp</item>
+        <item name="lineHeight">10sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="EscrowChatUnread">
+        <item name="android:textColor">@color/white</item>
+        <item name="fontFamily">@font/merriweather</item>
+        <item name="android:textSize">10sp</item>
+        <item name="lineHeight">12sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="CustomAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/daloge_corners</item>
+    </style>
+
+</resources>

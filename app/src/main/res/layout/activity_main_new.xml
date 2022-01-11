@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_test"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="app.gigg.me.app.Activity.MainActivity"
+    tools:openDrawer="start">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="0dp"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:backgroundTint="@color/new_blue"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@android:style/ThemeOverlay.Material.Dark.ActionBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:menu="@menu/lang_menu"
+            app:title="" />
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar2">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView4"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="32dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/imageView_profile"
+                            android:layout_width="53dp"
+                            android:layout_height="53dp"
+                            android:layout_marginStart="8dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/app_icon_round"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:src="@tools:sample/avatars" />
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout9"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView_profile"
+                            app:layout_constraintStart_toEndOf="@+id/imageView_profile"
+                            app:layout_constraintTop_toTopOf="@+id/imageView_profile">
+
+                            <TextView
+                                android:id="@+id/textView_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="@style/dash_username" />
+
+                            <TextView
+                                android:id="@+id/textView_email"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:textAppearance="@style/dash_email" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="16dp"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView_profile"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/imageView_profile">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="My Balance"
+                                android:textAppearance="@style/dash_my_balance" />
+
+                            <TextView
+                                android:id="@+id/textView_balance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:text="$ 00.00"
+                                android:textAppearance="@style/dash_balance" />
+
+                            <TextView
+                                android:id="@+id/btn_withdraw"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="?attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:onClick="oepnEarnings"
+                                android:text="Withdraw"
+                                android:textAppearance="@style/dash_withdraw" />
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <GridLayout
+                    android:id="@+id/gridLayout3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:columnCount="3"
+                    android:rowCount="2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView4">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="8dp"
+                        android:layout_marginBottom="24dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:onClick="openLiveTask"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:layout_width="64dp"
+                                android:layout_height="64dp"
+                                android:src="@drawable/ic_livetask" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Live Tasks"
+                                android:textAlignment="center"
+                                android:textAppearance="@style/dash_tile_text" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="8dp"
+                        android:layout_marginBottom="24dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:onClick="openMicroJobs"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:layout_width="64dp"
+                                android:layout_height="64dp"
+                                android:src="@drawable/ic_microjobs" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Micro Jobs"
+                                android:textAlignment="center"
+                                android:textAppearance="@style/dash_tile_text" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="8dp"
+                        android:layout_marginBottom="24dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:onClick="openEscrow"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:layout_width="64dp"
+                                android:layout_height="64dp"
+                                android:src="@drawable/ic_escrow" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Escrow"
+                                android:textAlignment="center"
+                                android:textAppearance="@style/dash_tile_text" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:onClick="openQuiz"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:layout_width="64dp"
+                                android:layout_height="64dp"
+                                android:src="@drawable/ic_quiz" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Quiz"
+                                android:textAlignment="center"
+                                android:textAppearance="@style/dash_tile_text" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:onClick="openHireMe"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:layout_width="64dp"
+                                android:layout_height="64dp"
+                                android:src="@drawable/ic_hireme" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Hire Me"
+                                android:textAlignment="center"
+                                android:textAppearance="@style/dash_tile_text" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:onClick="openHireCreative"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:layout_width="64dp"
+                                android:layout_height="64dp"
+                                android:src="@drawable/ic_hireacreative" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Hire a Creative"
+                                android:textAlignment="center"
+                                android:textAppearance="@style/dash_tile_text" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </GridLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="32dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/gridLayout3">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Top Earners"
+                        android:textAppearance="@style/dash_Tittle"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/btn_ChatRoom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="openChatRooms"
+                        android:text="Chat Room"
+                        android:textAppearance="@style/dash_Tittle"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView_top_earner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    android:overScrollMode="never"
+                    android:scrollbars="none"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"
+                    tools:listitem="@layout/single_player" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="32dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recyclerView_top_earner">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Blog/News"
+                        android:textAppearance="@style/dash_Tittle"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="openNewsAll"
+                        android:text="View All"
+                        android:textAppearance="@style/dash_Tittle"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView_blog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    android:overScrollMode="never"
+                    android:scrollbars="none"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout4"
+                    tools:listitem="@layout/blog_item" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:onClick="openInvest"
+                    app:cardCornerRadius="24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recyclerView_blog">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/invest_bannner" />
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/bannerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/banner_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/bannerView10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#FBF6ED"
+        app:headerLayout="@layout/nav_header"
+        app:itemTextAppearance="@style/dash_nav_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/drawer_navigation" />
+</androidx.drawerlayout.widget.DrawerLayout>

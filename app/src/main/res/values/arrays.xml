@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="stepLabels" >
+        <item>Info</item>
+        <item>Budget</item>
+        <item>Payment</item>
+    </string-array>
+    <string-array name="list_of_chat" >
+        <item>All Conversations</item>
+    </string-array>
+</resources>

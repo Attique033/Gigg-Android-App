@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:background="#FDF6EC"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activity.MainActivity">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:visibility="invisible"
+                android:layout_weight="1"
+                android:paddingLeft="5dp"
+                android:paddingTop="20dp"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:paddingRight="55dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/login_pic"
+                android:layout_weight="6"
+                android:layout_width="0dp"
+                android:layout_height="130dp"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/merriweather_bold"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:text="Welcome to"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/merriweather_bold"
+            android:gravity="top|center_horizontal"
+            android:text="gigg"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/merriweather"
+            android:gravity="center_horizontal"
+            android:paddingTop="8dp"
+            android:text="Signin to continue"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_margin="30dp"
+            app:cardCornerRadius="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textSize="12sp"
+                        android:fontFamily="@font/merriweather"
+                        android:text="Your Email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:id="@+id/login_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingBottom="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textSize="12sp"
+                        android:fontFamily="@font/merriweather"
+                        android:text="Your Password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:inputType="textPassword"
+                        android:id="@+id/login_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linear_login"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textSize="12sp"
+                        android:id="@+id/forgot_password"
+                        android:fontFamily="@font/merriweather"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="13dp"
+                        android:text="Forget Password ?"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:textSize="12sp"
+                        android:id="@+id/new_member"
+                        android:fontFamily="@font/merriweather"
+                        android:paddingRight="13dp"
+                        android:gravity="right"
+                        android:text="New Member?"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/login_progress_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_below="@id/linear_login"
+                    tools:ignore="NotSibling" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginLeft="25dp"
+                    android:textColor="@color/red"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/api_login_error"/>
+
+
+                <androidx.cardview.widget.CardView
+                    app:cardElevation="10dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="80dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardBackgroundColor="#456268"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/login_button"
+                            android:background="#456268"
+                            android:fontFamily="@font/merriweather"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:gravity="center"
+                            android:text="Login"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+</ScrollView>

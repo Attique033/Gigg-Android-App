@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_margin="8dp"
+    android:padding="8dp"
+    android:backgroundTint="@color/white"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp">
+
+    <LinearLayout
+        android:id="@+id/singlePlayerItem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/keyline_1_minus_8dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/singlePlayer_image"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_launcher_foreground"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/singlePlayer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/keyline_1_minus_8dp"
+            android:fontFamily="@font/merriweather_sans_light"
+            android:maxLines="2"
+            android:minLines="1"
+            android:text="James Smith"
+            android:textAlignment="center"
+            android:textColor="#456268"
+            android:textSize="12sp" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

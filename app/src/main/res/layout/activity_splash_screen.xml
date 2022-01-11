@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FDF6EC"
+    android:gravity="center"
+    tools:context=".Activity.SplashScreenActivity"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/splash_image"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/app_icon_round"/>
+
+    <TextView
+        android:fontFamily="@font/merriweather_sans_light"
+        android:gravity="center"
+        android:id="@+id/textView12"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/splash_image"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:text="@string/splash"
+        android:textAlignment="center"
+        android:textColor="#456268"
+        android:textSize="12sp"
+        android:textStyle="italic" />
+
+    <ProgressBar
+        android:progressTint="#456268"
+        android:id="@+id/splash_progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="8sp"
+        android:layout_below="@id/textView12"/>
+
+</RelativeLayout>

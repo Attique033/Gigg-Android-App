@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#314B51">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rel1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/backButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="goBack"
+                    android:padding="15dp"
+                    android:src="@drawable/ic_back_button" />
+
+                <EditText
+                    android:id="@+id/search_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_toEndOf="@+id/backButton"
+                    android:background="@drawable/search_bg"
+                    android:drawableEnd="@drawable/ic_search"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="@color/black"
+                    android:hint="Search here"
+                    android:paddingStart="@dimen/keyline_1_minus_8dp"
+                    android:paddingEnd="@dimen/keyline_1_minus_8dp"
+                    android:textAppearance="@style/cat_search_text" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/recent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/merriweather_sans_light"
+                android:text="Recents"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rel1">
+
+            </TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recentRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintTop_toBottomOf="@+id/recent"
+                tools:itemCount="6"
+                app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+                tools:listitem="@layout/search_creative_item_new"
+                android:orientation="vertical"
+                app:spanCount="2"/>
+
+            <include
+                android:id="@+id/include"
+                layout="@layout/layout_invite_friend"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recentRecycler" />
+
+            <TextView
+                android:id="@+id/semilar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/merriweather_sans_light"
+                android:text="Similar Creatives"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/include">
+
+            </TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/similarRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintTop_toBottomOf="@+id/semilar"
+                tools:itemCount="2"
+                tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                tools:listitem="@layout/search_creative_item_new"
+                tools:orientation="vertical"
+                tools:scrollbars="vertical"
+                tools:spanCount="2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

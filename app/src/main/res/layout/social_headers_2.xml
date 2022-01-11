@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:paddingTop="10dp"
+    android:background="@color/cardview_light_background"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:paddingLeft="15dp"
+            android:layout_gravity="left"
+            android:gravity="left"
+            android:fontFamily="@font/merriweather_sans_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Instagram :"
+            android:textSize="12sp" />
+
+        <EditText
+            android:textSize="12sp"
+            android:fontFamily="@font/merriweather_sans_light"
+            android:id="@+id/editText_ig_username"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/hire_inputext_bd"
+            android:drawableStart="@drawable/ic_insta"
+            android:drawablePadding="5dp"
+            android:hint="Username"
+            android:padding="8dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:paddingLeft="15dp"
+            android:layout_gravity="left"
+            android:gravity="left"
+            android:fontFamily="@font/merriweather_sans_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Twitter :"
+            android:textSize="12sp"/>
+
+        <EditText
+            android:textSize="12sp"
+            android:fontFamily="@font/merriweather_sans_light"
+            android:id="@+id/editText_twitter_username"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/hire_inputext_bd"
+            android:drawableStart="@drawable/ic_twitter"
+            android:drawablePadding="5dp"
+            android:hint="Username"
+            android:padding="8dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:paddingLeft="15dp"
+            android:layout_gravity="left"
+            android:gravity="left"
+            android:fontFamily="@font/merriweather_sans_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Youtube :"
+            android:textSize="12sp" />
+
+        <EditText
+            android:fontFamily="@font/merriweather_sans_light"
+            android:textSize="12sp"
+            android:id="@+id/editText_yt_username"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/hire_inputext_bd"
+            android:drawableStart="@drawable/ic_yt"
+            android:drawablePadding="5dp"
+            android:hint="Channel id"
+            android:padding="8dp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "629342152422",
+    "project_id": "gigg-me",
+    "storage_bucket": "gigg-me.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:629342152422:android:6199115cf8b30b7d7c7d27",
+        "android_client_info": {
+          "package_name": "app.gigg.me.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "629342152422-igvsaj43e05htllgj7n1ecfdgi7luj3g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.gigg.me.app",
+            "certificate_hash": "e83a7352b282f382c86149db10a4f75e045c8e13"
+          }
+        },
+        {
+          "client_id": "629342152422-go8uopc3c2fmurq8095uhu67s7c2g336.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAC_sOf1ppQX9PHue19VHK9czd7IVeR5L4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "629342152422-go8uopc3c2fmurq8095uhu67s7c2g336.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

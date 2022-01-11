@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:background="#314B51"
+    tools:context="com.earnhq.app.app.earnhq.app.Activity.CategoriesActivity">
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--        android:id="@+id/categories_toolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="?attr/actionBarSize"-->
+<!--        android:background="@color/colorPrimaryDark"-->
+<!--        app:titleTextColor="#ffffff"-->
+<!--        app:subtitleTextColor="#ffffff"-->
+<!--        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"-->
+<!--        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"-->
+<!--        android:elevation="0dp"/>-->
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_above="@+id/spinLayout"
+        android:id="@+id/categories_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/backButton"
+                            android:padding="15dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_back_button">
+                        </ImageView>
+                        <ImageView
+                            android:id="@+id/menuButton"
+                            android:padding="15dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/ic_menu5">
+                        </ImageView>
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/star"
+                        android:layout_width="256dp"
+                        android:layout_height="256dp">
+                    </ImageView>
+
+                    <RelativeLayout
+                        android:layout_marginHorizontal="15dp"
+                        android:background="@drawable/quiz_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp">
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:id="@+id/quiz_time"
+                            android:src="@drawable/quiz_time"
+                            android:layout_width="85dp"
+                            android:layout_height="85dp"
+                            android:layout_marginHorizontal="15dp">
+                        </ImageView>
+
+                        <TextView
+                            android:textColor="@color/quiz_text_color"
+                            android:layout_marginHorizontal="15dp"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/merriweather_sans_light"
+                            android:text="Answer Quiz questions\n and get rewarded\n Instantly"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:layout_toEndOf="@+id/quiz_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                        </TextView>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:fontFamily="@font/merriweather_sans_light"
+                        android:layout_marginVertical="10dp"
+                        android:layout_marginHorizontal="15dp"
+                        android:textSize="16dp"
+                        android:textColor="@color/white"
+                        android:text="Categories"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:nestedScrollingEnabled="false"
+                    android:id="@+id/all_categories_recycler"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:layout_marginBottom="5dp"
+        android:id="@+id/spinLayout"
+        android:layout_above="@+id/banner_container_categories_activity"
+        android:onClick="openSpin2Win"
+        android:layout_marginHorizontal="15dp"
+        android:background="@drawable/quiz_bg"
+        android:layout_width="match_parent"
+        android:layout_height="90dp">
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/spin"
+            android:src="@drawable/spin"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginHorizontal="15dp">
+        </ImageView>
+
+        <TextView
+            android:textColor="@color/quiz_text_color"
+            android:layout_marginHorizontal="15dp"
+            android:textSize="16sp"
+            android:fontFamily="@font/merriweather_sans_light"
+            android:text="Spin the wheel and win up to\n $25 instantly"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_toEndOf="@+id/spin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </TextView>
+    </RelativeLayout>
+<!--    <Button-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_above="@+id/banner_container_categories_activity"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginEnd="16dp"-->
+<!--        android:background="@drawable/button_radius"-->
+<!--        android:text="Spin2Win"-->
+<!--        android:textAllCaps="false"-->
+<!--        android:onClick="openSpin2Win"-->
+<!--        android:textAppearance="@style/give_review_submit_text" />-->
+    <LinearLayout
+        android:id="@+id/banner_container_categories_activity"
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent" />
+    <RelativeLayout
+        android:id="@+id/bannerView10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center" />
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="100dp"
+    android:layout_height="120dp"
+    android:layout_rowWeight="1"
+    android:layout_columnWeight="1"
+    android:layout_gravity="center"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp">
+
+    <LinearLayout
+        android:id="@+id/job_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/job_image"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/ic_livetask" />
+
+        <TextView
+            android:id="@+id/job_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Social media promotions"
+            android:textAlignment="center"
+            android:textAppearance="@style/dash_tile_text" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

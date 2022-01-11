@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/subcription_Bg"
+            android:layout_width="150dp"
+            android:layout_height="220dp"
+            android:background="@drawable/unselected_card"
+            android:elevation="10dp">
+
+            <TextView
+                android:fontFamily="@font/merriweather"
+                android:id="@+id/textView_sub_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+
+                android:text="Economy:"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:fontFamily="@font/merriweather"
+                android:id="@+id/textView_sub_Discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+
+                android:text="@string/_15_99"
+                android:textColor="#A3A3A3"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_sub_title" />
+
+            <TextView
+                android:fontFamily="@font/merriweather"
+                android:id="@+id/textView_sub_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/ten_usd"
+                android:textColor="#15CC79"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_sub_Discount" />
+
+            <TextView
+                android:fontFamily="@font/merriweather"
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+
+                android:text="● Full Earning Access"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/withdrawal_day"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_sub_price" />
+
+            <TextView
+                android:fontFamily="@font/merriweather"
+                android:id="@+id/withdrawal_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="● Monthly Withdraw"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+            <View
+                android:id="@+id/view_sub_dot"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/card_unselected_dot"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/withdrawal_day" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:fontFamily="@font/merriweather"
+        android:id="@+id/textView_Tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/subcription_text_green"
+        android:elevation="0dp"
+
+        android:padding="4dp"
+        android:text="BEST VALUE"
+        android:textColor="#FFFFFF"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

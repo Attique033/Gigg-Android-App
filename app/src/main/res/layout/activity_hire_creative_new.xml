@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:numberpicker="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#314B51"
+    tools:context=".Activity.freelance.ui.HireCreativeActivity">
+
+    <RelativeLayout
+        android:id="@+id/rel1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:src="@drawable/ic_back_button" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/backButton"
+            android:fontFamily="@font/merriweather_sans_light"
+            android:gravity="center_horizontal"
+            android:text="What are you looking for?"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold">
+
+        </TextView>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/rel1"
+        numberpicker:layout_constraintEnd_toEndOf="parent"
+        numberpicker:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/details"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/merriweather_sans_light"
+                android:gravity="center_horizontal"
+                android:text="Details"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/merriweather_sans_light"
+                android:gravity="center_horizontal"
+                android:text="Budget"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold">
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/job_a_post_indicator_bg"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <View
+                android:id="@+id/view_details"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/job_post_indicator_view1">
+
+            </View>
+
+            <View
+                android:id="@+id/view_budget"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null">
+
+            </View>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/indicator">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <TextView
+                    android:id="@+id/project_cate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/merriweather_sans_light"
+                    android:text="Project Category"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </TextView>
+
+                <LinearLayout
+                    android:id="@+id/project_cate_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/job_a_post_indicator_bg"
+                    app:layout_constraintTop_toBottomOf="@+id/project_cate">
+
+                    <EditText
+                        android:id="@+id/editText_project_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_margin="15dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@null"
+                        android:enabled="false"
+                        android:fontFamily="@font/merriweather_sans_light"
+                        android:hint="category"
+                        android:textColor="@color/black"
+                        android:textColorHint="#303030"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/project_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/merriweather_sans_light"
+                    android:text="Project Title"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/project_cate_input">
+
+                </TextView>
+
+                <LinearLayout
+                    android:id="@+id/project_cate_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/job_a_post_indicator_bg"
+                    app:layout_constraintTop_toBottomOf="@+id/project_title">
+
+                    <EditText
+                        android:id="@+id/editText_project_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_margin="15dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@null"
+                        android:fontFamily="@font/merriweather_sans_light"
+                        android:hint="Enter your project title here...."
+                        android:textColor="@color/black"
+                        android:textColorHint="#303030"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/project_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/merriweather_sans_light"
+                    android:text="Project Description"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/project_cate_title">
+
+                </TextView>
+
+                <LinearLayout
+                    android:id="@+id/project_cate_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/job_a_post_indicator_bg"
+                    app:layout_constraintTop_toBottomOf="@+id/project_description">
+
+                    <EditText
+                        android:id="@+id/editText_project_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_margin="15dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@null"
+                        android:fontFamily="@font/merriweather_sans_light"
+                        android:gravity="top"
+                        android:hint="Enter your project description here here...."
+                        android:textColor="@color/black"
+                        android:textColorHint="#303030"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/project_country"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/merriweather_sans_light"
+                    android:text="Country"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/project_cate_description">
+
+                </TextView>
+
+
+                <LinearLayout
+                    android:id="@+id/layout_spin_country"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/project_country">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/country_re"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        tools:listitem="@layout/country_spinner" />
+
+                    <Spinner
+                        android:id="@+id/country_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/hire_inputext_bd_b" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/hireMe_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="40dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/button_radius"
+                    android:gravity="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/layout_spin_country">
+
+                    <TextView
+                        android:id="@+id/texthire"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Continue"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:textSize="17sp">
+
+                    </TextView>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@+id/texthire"
+                        android:src="@drawable/buttoniconprofile">
+
+                    </ImageView>
+
+                </RelativeLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_budget"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                tools:visibility="gone">
+
+                <TextView
+                    android:id="@+id/budget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/merriweather_sans_light"
+                    android:text="Budget"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </TextView>
+
+                <LinearLayout
+                    android:id="@+id/budget_Input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/job_a_post_indicator_bg"
+                    app:layout_constraintTop_toBottomOf="@+id/budget">
+
+                    <EditText
+                        android:id="@+id/editText_budget_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_margin="15dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@null"
+                        android:fontFamily="@font/merriweather_sans_light"
+                        android:hint="$"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/black"
+                        android:textColorHint="#303030"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/volume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/merriweather_sans_light"
+                    android:text="Volume"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/budget_Input">
+
+                </TextView>
+
+                <com.travijuu.numberpicker.library.NumberPicker
+                    android:id="@+id/volume_picker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintTop_toBottomOf="@+id/volume"
+                    numberpicker:custom_layout="@layout/number_picker"
+                    numberpicker:focusable="false"
+                    numberpicker:layout_constraintStart_toStartOf="parent"
+                    numberpicker:min="0"
+                    numberpicker:unit="1" />
+
+
+                <TextView
+                    android:id="@+id/project_upload_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/merriweather_sans_light"
+                    android:text="Upload image/document"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/volume_picker">
+
+                </TextView>
+
+
+                <Button
+                    android:id="@+id/upload_btn"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/job_a_post_indicator_bg"
+                    android:text="Upload"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toBottomOf="@+id/project_upload_img"
+                    numberpicker:layout_constraintStart_toStartOf="parent">
+
+                </Button>
+
+
+                <TextView
+                    android:id="@+id/project_payment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/merriweather_sans_light"
+                    android:text="Payment"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/upload_btn">
+
+                </TextView>
+
+                <LinearLayout
+                    android:id="@+id/lin_payment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="vertical"
+                    numberpicker:layout_constraintTop_toBottomOf="@+id/project_payment">
+
+                    <TextView
+                        android:id="@+id/text_paid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Paid by paypal, amount $5.00"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_payment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:id="@+id/button_visa"
+                            android:layout_width="70dp"
+                            android:layout_height="55dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/payment"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/visa" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/pay_pal_button"
+                            android:layout_width="70dp"
+                            android:layout_height="55dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/payment"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:src="@drawable/paypal" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/button_master"
+                            android:layout_width="70dp"
+                            android:layout_height="55dp"
+                            android:background="@drawable/payment"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:src="@drawable/mastercard" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/sibmit_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="40dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/button_radius"
+                    android:gravity="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lin_payment">
+
+                    <TextView
+                        android:id="@+id/textSubmit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Submit"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:textSize="17sp">
+
+                    </TextView>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@+id/textSubmit"
+                        android:src="@drawable/buttoniconprofile">
+
+                    </ImageView>
+
+                </RelativeLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".Activity.freelance.ui.PostReviewActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+                android:onClick="goBack"/>
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Give a Review"
+                android:fontFamily="@font/merriweather"
+                android:textSize="21sp"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView15"
+                app:layout_constraintTop_toTopOf="parent" />
+
+<!--            <ImageView-->
+<!--                android:id="@+id/imageView17"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginEnd="16dp"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:srcCompat="@drawable/ic_menu" />-->
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Tell us how you will like to rate this creative: "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar5"
+       android:fontFamily="@font/merriweather"
+        android:textColor="@color/black"
+        android:textSize="15sp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:elevation="0dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView27">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <ImageView
+                android:id="@+id/review_profile_image"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/linearLayout8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars"
+                android:scaleType="centerCrop"/>
+
+            <LinearLayout
+                android:id="@+id/linearLayout8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView28"
+                app:layout_constraintStart_toEndOf="@+id/review_profile_image"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:text="Name"
+                    android:id="@+id/review_name_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp"
+                   android:fontFamily="@font/merriweather"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:text="School name"
+                    android:id="@+id/review_school_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/merriweather"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:text="country name"
+                    android:id="@+id/review_country_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/merriweather"
+                    android:textSize="15sp"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/review_cap_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/merriweather"
+                    android:textSize="15sp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="$50"
+                android:textAppearance="@style/give_review_amount_text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/button5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Attitude:"
+                android:fontFamily="@font/merriweather"
+                android:textSize="15sp"
+                android:textColor="@color/black" />
+
+            <RatingBar
+                android:id="@+id/review_attitude_ratingBar"
+                style="@style/Widget.AppCompat.RatingBar.Indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:isIndicator="false"
+                android:numStars="5"
+                android:progressTint="#FFC42E"
+                android:rating="0.0"
+                android:secondaryProgressTint="@android:color/transparent"
+                android:stepSize="0.5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Professionalism:"
+                android:fontFamily="@font/merriweather"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+
+            <RatingBar
+                android:id="@+id/review_prof_ratingBar"
+                style="@style/Widget.AppCompat.RatingBar.Indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:isIndicator="false"
+                android:numStars="5"
+                android:progressTint="#FFC42E"
+                android:rating="0.0"
+                android:secondaryProgressTint="@android:color/transparent"
+                android:stepSize="0.5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Availability:"
+                android:fontFamily="@font/merriweather"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+
+            <RatingBar
+                android:id="@+id/review_av_ratingBar"
+                style="@style/Widget.AppCompat.RatingBar.Indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:isIndicator="false"
+                android:numStars="5"
+                android:progressTint="#FFC42E"
+                android:rating="0.0"
+                android:secondaryProgressTint="@android:color/transparent"
+                android:stepSize="0.5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Describe your experience with the creative:"
+                android:fontFamily="@font/merriweather"
+                android:textSize="15sp"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/review_desc_text"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/review_text"
+                android:gravity="top"
+                android:hint="Type Here..."
+                android:padding="8dp"
+                android:textAppearance="@style/review_text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Add Photo or Video"
+                android:fontFamily="@font/merriweather"
+                android:textSize="15sp"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/review_text"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="loadFile">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_upload" />
+
+                    <TextView
+
+                        android:id="@+id/review_file_name"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:maxLines="2"
+                        android:text="Click for upload"
+                        android:fontFamily="@font/merriweather"
+                        android:textSize="13sp"
+                        android:textColor="#BBBBBB"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:fontFamily="@font/merriweather"
+        android:id="@+id/button5"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_radius"
+        android:text="Submit Review"
+        android:textAppearance="@style/give_review_submit_text"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="submitReview"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#314B51"
+    tools:context=".Activity.freelance.ui.ShareProfileActivity">
+
+    <RelativeLayout
+        android:id="@+id/rel1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/menuButton"
+            android:padding="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/buttoncross"
+            android:onClick="goBack">
+        </ImageView>
+
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint1"
+        android:layout_marginHorizontal="15dp"
+        android:background="@drawable/contact_bg"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/rel1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:onClick="shareLink">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iconshare1"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/sharegigmelinkicon1"
+            android:layout_width="80dp"
+            android:layout_height="80dp">
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+        <LinearLayout
+            android:layout_marginHorizontal="10dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@+id/iconshare1"
+            app:layout_constraintEnd_toStartOf="@+id/shareicon2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="Share a Gigg link"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:fontFamily="@font/merriweather"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+                android:text="Invite employers directly\n to hire you"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:fontFamily="@font/merriweather"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/shareicon2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/sharegigmelinkicon2"
+            android:layout_marginEnd="10dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp">
+
+        </ImageView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/contactGig"
+        app:layout_constraintTop_toBottomOf="@+id/constraint1"
+        android:text="Contacts on Gigg"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:fontFamily="@font/merriweather"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+    <EditText
+        app:layout_constraintTop_toBottomOf="@+id/contactGig"
+        android:layout_marginHorizontal="15dp"
+
+        android:id="@+id/search_text"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/search_bg"
+        android:drawableEnd="@drawable/ic_search"
+        android:drawableTint="@color/black"
+        android:drawablePadding="8dp"
+        android:hint="Search gig contact"
+        android:textAppearance="@style/cat_search_text"
+        android:paddingStart="@dimen/keyline_1_minus_8dp"
+        android:paddingEnd="@dimen/keyline_1_minus_8dp" />
+    
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/item"
+        app:layout_constraintTop_toBottomOf="@+id/search_text"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/gigg_contacts_item"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"
+        app:spanCount="1">
+        
+
+        
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="25dp"
+        android:id="@+id/selectcontacttext"
+        app:layout_constraintTop_toBottomOf="@+id/item"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/reload"
+        android:text="Select Contacts"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:fontFamily="@font/merriweather"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+    <ImageView
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/reload"
+        app:layout_constraintTop_toBottomOf="@+id/item"
+        android:src="@drawable/reload"
+        android:layout_width="30dp"
+        android:layout_height="30dp">
+
+    </ImageView>
+
+
+    <EditText
+        app:layout_constraintTop_toBottomOf="@+id/reload"
+        android:layout_marginHorizontal="15dp"
+        android:id="@+id/search_text2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/search_bg"
+        android:drawableEnd="@drawable/ic_search"
+        android:drawableTint="@color/black"
+        android:drawablePadding="8dp"
+        android:hint="Search phone contact"
+        android:textAppearance="@style/cat_search_text"
+        android:paddingStart="@dimen/keyline_1_minus_8dp"
+        android:paddingEnd="@dimen/keyline_1_minus_8dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/c_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_text2"
+        tools:listitem="@layout/contacts_item"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/banner_container"
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent" />
+    <LinearLayout
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/bannerView10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center" />
+</androidx.constraintlayout.widget.ConstraintLayout>

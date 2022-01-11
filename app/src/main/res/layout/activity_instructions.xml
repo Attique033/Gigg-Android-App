@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context="com.earnhq.app.app.earnhq.app.Activity.InstructionsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/instructions_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/color_bg"
+        android:elevation="0dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:subtitleTextColor="#ffffff"
+        app:titleTextColor="#ffffff" />
+
+    <ScrollView
+        android:id="@+id/instructions_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/instructions_toolbar"
+        android:background="@color/colorPrimaryDark"
+        android:fillViewport="true"
+        android:nestedScrollingEnabled="false"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/home_design" />
+
+            <LinearLayout
+                android:id="@+id/linear_layout_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/home_banner"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:fontFamily="@font/merriweather"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/fragment_instructions_title"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_layout_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/linear_layout_1"
+                android:layout_margin="15dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:src="@drawable/instructions" />
+
+                <TextView
+                    android:fontFamily="@font/merriweather"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="1. This app is a Micro-jobs aggregator app. We collect tasks and jobs from employers from around the world for freelancers to get done and share revenue with them."
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:fontFamily="@font/merriweather"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="2. This is premium app, that is, you have to be a paid member to get paid. This is so to encourage seriousness with every task."
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:fontFamily="@font/merriweather"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="3. Payments are made via PayPal or Bitcoin every Friday or 30th of the Month, based on your subscription."
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:fontFamily="@font/merriweather"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="4. To get paid, click on the Micro-jobs icon, take on the tasks, follow the instructions very well and once completed your points will be updated which are automatically converted to real money for withdrawal."
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:fontFamily="@font/merriweather"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="5. Employers: You are welcome onboard. Just click on the 'Hire a Freelancer' icon, follow the instructions and give clear details about your project, including the volume you wish to get done and ensure you bid according to the category."
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:fontFamily="@font/merriweather"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="N:B There is currently no refunds to amount deposited for a task. You can however withdraw back your money, if you cancel your task. However where you are reported to have cheated the system or defrauded a freelancer, then your money will not be released. "
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:fontFamily="@font/merriweather"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="Freelancer: Ensure to chat with the employer very well, understand the task before taking it up. Submit proof and follow up with employer. Where an employer rejects your work after you have finished and you're not satisfied, you are free to raise a query against him."
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:fontFamily="@font/merriweather"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="ADs: This app contains ads, which is an avenue for us in raising revenue. Where you think the ads are very obstructive kindly reach us about it as we continue to work in making the ads optional."
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+                <TextView
+                    android:fontFamily="@font/merriweather"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="Quiz: "
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+                <TextView
+                    android:fontFamily="@font/merriweather"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/fragment_instructions_1"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:fontFamily="@font/merriweather"
+                    android:id="@+id/tv2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/fragment_instructions_2"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:fontFamily="@font/merriweather"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/fragment_instructions_3"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:fontFamily="@font/merriweather"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/fragment_instructions_4"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:fontFamily="@font/merriweather"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/fragment_instructions_5"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:fontFamily="@font/merriweather"
+                    android:id="@+id/tv6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/fragment_instructions_6"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:fontFamily="@font/merriweather"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/fragment_instructions_7"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:fontFamily="@font/merriweather"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/fragment_instructions_8"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:fontFamily="@font/merriweather"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/fragment_instructions_9"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:fontFamily="@font/merriweather"
+                    android:id="@+id/tv10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/fragment_instructions_10"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:fontFamily="@font/merriweather"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/fragment_instructions_11"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

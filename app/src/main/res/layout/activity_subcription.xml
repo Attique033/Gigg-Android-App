@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.gigg.me.app.Activity.SubcriptionActivity"
+    android:background="#FBF6ED">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_sub2"
+        android:onClick="goBack"/>
+
+    <TextView
+        android:fontFamily="@font/merriweather"
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Validate your passion"
+        android:textAppearance="@style/subcription_text_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:srcCompat="@drawable/coin_sv" />
+
+    <TextView
+        android:fontFamily="@font/merriweather"
+        android:id="@+id/textView7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:text="Earn up to $400/week Premium membership affords you the exclusive privilege to all earning avenues and uninterrupted.  "
+        android:textAlignment="center"
+        android:textAppearance="@style/subcription_text_desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_subcriptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        tools:itemCount="2"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        tools:listitem="@layout/subcription_item" />
+
+    <CheckBox
+        android:fontFamily="@font/merriweather"
+        android:id="@+id/checkBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="45dp"
+        android:checked="true"
+        android:text="Grant me access to full earning potential and withdrawal"
+        android:textAppearance="@style/subcription_text_grant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView_subcriptions" />
+
+    <Button
+        android:fontFamily="@font/merriweather"
+        android:id="@+id/button3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/pay_button_bg"
+        android:text="Pay"
+        android:textColor="#FFFFFF"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/banner_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="proceedPay"/>
+
+    <LinearLayout
+        android:id="@+id/banner_container"
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent" />
+    <LinearLayout
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/bannerView10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center" />
+</androidx.constraintlayout.widget.ConstraintLayout>
